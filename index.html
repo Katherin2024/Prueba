@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD con Firebase</title>
+  <!-- Importa Firebase desde un CDN compatible con módulos -->
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+  <script type="module" defer src="script.js"></script> <!-- Usa "type=module" aquí también -->
+</head>
+<body>
+  <h1>CRUD con Firebase</h1>
+  <div>
+    <input type="text" id="nombre usuario" placeholder="Nombre">
+    <input type="text" id="email" placeholder="Email">
+    <button id="agregar">Agregar</button>
+  </div>
+
+  <ul id="listado">
+    <!-- Los elementos de la lista aparecerán aquí -->
+  </ul>
+  <div id="editar">
+    <input type="text" id="nombreEdit" placeholder="Nuevo Nombre">
+    <input type="text" id="emailEdit" placeholder="Nuevo Email">
+    <button id="guardar">Guardar cambios</button>
+  </div>
+</body>
+</html>
