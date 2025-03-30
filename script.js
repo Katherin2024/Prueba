@@ -57,7 +57,7 @@ const cargarUsuarios = async () => {
   querySnapshot.forEach((doc) => {
     const usuario = doc.data();
     const li = document.createElement("li");
-    li.textContent = ${usuario.nombre} - ${usuario.email};
+    li.textContent = `${usuario.nombre} - ${usuario.email}`;
     const btnEditar = document.createElement("button");
     btnEditar.textContent = "Editar";
     const btnEliminar = document.createElement("button");
