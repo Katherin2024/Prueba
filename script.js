@@ -1,21 +1,23 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.5.0/firebase-app.js";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+// Importa las funciones necesarias de Firebase
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
+import { getFirestore, collection, addDoc, getDocs, updateDoc, deleteDoc, doc } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js";
 
-// Your web app's Firebase configuration
+// Configuración de Firebase
 const firebaseConfig = {
-  apiKey: "AIzaSyBnnbVdj_h3og0AfZd6EqQoxexoJVLq92c",
-  authDomain: "aplicaciones-7e63f.firebaseapp.com",
-  projectId: "aplicaciones-7e63f",
-  storageBucket: "aplicaciones-7e63f.firebasestorage.app",
-  messagingSenderId: "411353939307",
-  appId: "1:411353939307:web:35c1886a850187ec40e02e"
+
+    apiKey: "AIzaSyBnnbVdj_h3og0AfZd6EqQoxexoJVLq92c",
+    authDomain: "aplicaciones-7e63f.firebaseapp.com",
+    projectId: "aplicaciones-7e63f",
+    storageBucket: "aplicaciones-7e63f.firebasestorage.app",
+    messagingSenderId: "411353939307",
+    appId: "1:411353939307:web:35c1886a850187ec40e02e",
+      
 };
 
 // Inicializa Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+
 
 // Referencia al formulario
 const nombreInput = document.getElementById("nombre");
